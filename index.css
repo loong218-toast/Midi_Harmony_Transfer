@@ -1,0 +1,250 @@
+#play-button{
+  display: none;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+#dashboard{
+  color: #7e7e7e;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#dashboard.active{
+  color: #7e7e7e;
+  background-color: #cbcbcb;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#midiplot{
+  color: #7e7e7e;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#midiplot.active{
+  background-color: #cbcbcb;
+}
+
+#table{
+  color: #7e7e7e;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#table.active{
+  background-color: #cbcbcb;
+}
+
+#upload-button{
+  position: relative;
+  right: 0;
+  transition: all 0.4s;
+}
+
+
+.transfer-button-property{
+  display:none;
+  opacity: 0;
+  border-color: rgb(174, 113, 90);
+  transform: translateY(1px);
+}
+
+.transfer-button-property2{
+  display: block;
+  border: none;
+  padding: 1px 1px;
+  padding-top: 1px;
+  font-size:13px;
+  transition: top 5s, font-size 5s;
+  opacity: 100;
+  transform: translateY(-24px);
+}
+
+.download-button-property{
+  display:none;
+  opacity: 0;
+  border-color: rgb(90, 174, 103);
+  transform: translateY(1px);
+  visibility: hidden;
+}
+
+.download-button-property2{
+  display: block;
+  top: 1px;
+  position: absolute;
+
+}
+
+
+#transfer-button:hover{
+  background-color: rgb(216, 144, 102);
+  transition: 0.4s;
+  
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #8d8d8d !important;
+}
+
+
+
+.dropdown-menu{
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: .4s, 0s;
+  transition-delay: 0s, .4s;
+  background-color: #bbbbbb;
+
+}
+
+.dropdown:hover .dropdown-menu {
+
+  opacity: 1;
+  transition-delay: 0s, 0s;
+
+}
+
+.dropdown-item:active {
+
+  background-color: #bbbbbb;
+
+}
+
+#dropdownMenuButton{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+li:hover:active{
+  color: #bbbbbb;
+  border: #bbbbbb solid 1px;
+  border-radius: 5px;
+  background:#fff;
+  display:block;
+}
+
+.progress-outer{
+  background: #fff;
+  padding: 2px 2px 2px 2px;
+  border: 2px solid #bebfbf;
+  border-radius: 45px;
+  bottom: 0px;
+  width: 0px;
+  position: absolute;
+  /* display: none; */
+  opacity: 0;
+  
+}
+
+.progress-outer-property2{
+  opacity: 100;
+  /* display: block; */
+  width: 140px;
+  transition: all 0.3s;
+  bottom: 0px;
+}
+
+.progress-bar{
+  background-color: rgb(242, 185, 153);
+}
+
+.progress{
+  background: #bebfbf;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.progress .progress-bar{
+  border-radius: 20px;
+  box-shadow: none;
+  animation: animate-positive 2s;
+}
+.progress-value{
+  font-size: 10px;
+  font-weight: 700;
+  color: #e5f1f8;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+/* 
+#sub_card{
+
+} */
+
+/* #sub_card:hover{
+
+  border-top: 3px solid;
+  border-top-color: #95a6ce;
+  transition: border 0.1s linear;
+
+} */
+
+#key-text{
+  color:#3f3f3f;
+}
+
+#tempo-text{
+  color:#3f3f3f;
+}
+
+#timelength-text{
+  color:#3f3f3f;
+}
+
+
+#velocity-canvas{
+    margin:0;
+    padding:0;
+}
+
+#spinner-corner{
+
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  display: none;
+}
+/* #myChart{
+
+  color: #cbcbcb;
+} */
+
+
