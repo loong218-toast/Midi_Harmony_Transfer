@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Midi harmony transfer technology"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="index.css" rel="stylesheet"/>
+    <link href="index.scss" rel="stylesheet"/>
+
+    <div id="root"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color:rgb(62, 124, 177);font-size:20px;">
+            MIDI Harmony Transfer
+          </a>
+        </div>
+    </nav>
+
+  </head>
+  <body>
+    <div class="card">
+      
+        <div class="card-body"">
+          <div class="card"">
+            <div class="card"">
+              <div class="card-header">
+                <div class="row">
+
+                  <div class="col-6">
+                    <ul class="nav nav-pills card-header-pills" role="tablist">
+                      <li class="nav-item">
+                        <button class="nav-link active" id="dashboard" data-bs-toggle="pill" data-bs-target="#dashboard-tab" type="button" role="tab" aria-controls="dashboard-tab" aria-selected="true">Dashboard</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link" id="midiplot" data-bs-toggle="pill" data-bs-target="#midiplot-tab" type="button" role="tab" aria-controls="midiplot-tab" aria-selected="false">Midi Plot</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link" id="table" data-bs-toggle="pill" data-bs-target="#table-tab" type="button" role="tab" aria-controls="table-tab" aria-selected="false">Table</button>
+                      </li>
+
+
+                    </ul>
+
+                  </div>
+                  <div class="col-2">
+                    
+                    <div class="dropdown">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="upload-button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose File</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 14px;">
+                        
+                        <button class="dropdown-item" onclick="upload()">Upload1&nbsp;&nbsp;
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                          </svg>
+                          <input type="file" id="upload1" style="display:none" accept=".mid" onchange="getfile()">
+                        </button>
+
+                        <button class="dropdown-item" onclick="upload2()">Upload2&nbsp;&nbsp;
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                          </svg>
+                          <input type="file" id="upload2" style="display:none" accept=".mid">
+                        </button>
+
+                        <button class="dropdown-item" onclick="samples()">Samples&nbsp;&nbsp;
+
+                          <input type="file" id="samples" style="display:none" accept=".mid">
+                        </button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col">
+
+                    <div class="dropdown">
+                      <div class="d-grid gap-1">
+                      <button class="card" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Main
+                            </button>
+                          
+                      <ul class="dropdown-menu" id="dropdownmenu" aria-labelledby="dropdownMenuButton1" position:relative">
+                        <li><a class="dropdown-item" href="#">Main</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Second</a></li>
+                      </ul>
+
+                    </div>
+                  </div>
+                    
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="tab-content" id="tabContent">
+
+                <div class="card-body tab-pane fade show active" id="dashboard-tab" role="tabpanel" aria-labelledby="dashboard">
+                    <div class="row">
+
+                      <div class="col-md-6 px-3">
+
+                        <div class="row">
+
+                            <div class="col">
+                              <div class="card shadow-sm" style="height: 10rem;" id="sub_card">
+                                <div class="card-body" style="color: #555555; background-color: #d8ece9;">
+                                <h2 class="card-text m-2">C#</h2>
+                                <h5 class="card-text text-muted m-3">Key</h5>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col">
+                              <div class="card shadow-sm" style="height: 10rem;" id="sub_card">
+                                <div class="card-body" style="color: #444444; background-color: #d6dcec;">
+                                  <h2 class="card-text m-2">110</h2>
+                                  <h5 class="card-text text-muted m-3">Tempo</h5>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col">
+                              <div class="card shadow-sm" style="height: 10rem;" id="sub_card">
+                                <div class="card-body" style="color: #404040; background-color: #d8c9e9;">
+                                  <h2 class="card-text m-2">1:10</h2>
+                                  <h5 class="card-text text-muted m-3">Time Length</h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row py-3">
+
+                            <div class="col">
+                                <div class="card shadow-sm" style="height: 10rem;" id="sub_card">
+                                  <div class="card-body" style="color: #6f6f6f; background-color: #c5c7e1;">
+                                  <h4 class="card-title m-0">Velocity Series</h4>
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>
+                          
+                      </div>
+                      <div class="col px-4">
+
+                        <div class="row">
+                          <div class="card shadow-sm" style="height: 15rem;" id="sub_card">
+                            <canvas id="myChart"></canvas>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                </div>
+
+                <div class="card-body tab-pane fade" id="midiplot-tab" role="tabpanel" aria-labelledby="midiplot">
+
+                    <p>gggg</p>
+
+                  
+                </div>
+                <div class="card-body tab-pane fade" id="table-tab" role="tabpanel" aria-labelledby="table">
+                  <p>sss</p>
+                </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="index.js"></script>
+    <script src="chart.js"></script>
+    <script src="getfile.js"></script>
+    <script type= src="Axios.js"></script>
+
+
+  </body>
+</html>

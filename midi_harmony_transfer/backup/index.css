@@ -1,0 +1,75 @@
+
+
+#dashboard{
+    color: #7e7e7e;
+}
+#dashboard.active{
+    color: #7e7e7e;
+    background-color: #cbcbcb;
+}
+
+#midiplot{
+    color: #7e7e7e;
+}
+#midiplot.active{
+    background-color: #cbcbcb;
+}
+
+#table{
+    color: #7e7e7e;
+}
+#table.active{
+    background-color: #cbcbcb;
+}
+
+.dropdown-menu{
+    /* visibility: hidden; */
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: .4s, 0s;
+    transition-delay: 0s, .4s;
+    background-color: #bbbbbb;
+
+}
+
+.dropdown:hover .dropdown-menu {
+
+    /* visibility: visible; */
+    opacity: 1;
+    transition-delay: 0s, 0s;
+    /* display: block;
+    margin-top: 0;
+    transition: 0.5s linear; */
+ }
+
+.dropdown-item:active {
+
+    background-color: #bbbbbb;
+
+ }
+
+
+ 
+
+li:hover:active{
+    color: #bbbbbb;
+    border: #bbbbbb solid 1px;
+    border-radius: 5px;
+    background:#fff;
+    display:block;
+}
+
+#sub_card{
+
+}
+
+#sub_card:hover{
+
+    border-top: 3px solid;
+    border-top-color: #95a6ce;
+    transition: border 0.1s linear;
+
+}
+
+
+
