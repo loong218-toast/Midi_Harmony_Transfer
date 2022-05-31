@@ -45,7 +45,7 @@ The whole process is optimized by gradient descent. More groups of notes are pro
 The algorithm constantly monitor the changing distribution of the music each timeframe with anomaly detection. When the distribution changes drastically (it hits an adaptive threshold), The algorithm groups those notes that happen before the spike. This is used to simulate how human hear the chord changes in music. The downside of this method is that, it needs collect enough data first so that it detects chord changes, but this can cause some delay.
 
 ## Other Features
-This web app can identify key, tempo, and time length of a song. Music modes and tempo changes are not supported yet.
+This web app can identify key, tempo, and time length of a Midi file. Music modes and tempo changes are not supported yet.
 
 # Resources
 Python : Django, Pandas, Numpy, Prettymidi, Musicpy, Plotly, Re <br/>
