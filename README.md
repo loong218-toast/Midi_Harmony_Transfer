@@ -47,6 +47,6 @@ The algorithm constantly monitor the changing distribution of the music each tim
 ## Other Features
 This web app can identify key, tempo, and time length of a Midi file. Music modes and tempo changes are not supported yet.
 
-# Resources
+# Resources Used
 Python : Django, Pandas, Numpy, Prettymidi, Musicpy, Plotly, Re <br/>
 Web dev : Javascript (React, Jquery, Axios, Chart.js), HTML (Bootstrap), CSS
