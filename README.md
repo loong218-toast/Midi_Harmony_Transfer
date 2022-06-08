@@ -23,8 +23,8 @@ https://user-images.githubusercontent.com/77558802/171202693-76c53fc2-f403-473d-
 
 # Algorithm
 
-The algorithm compares two musical note distributions of two different Midi files(.mid), then one will adjusts its distribution to try to fit another one. <br/>
-The distribution fitting process is done by moving groups of notes which are majority, and move to those notes that are minority.
+The algorithm compares two musical note distributions of two different Midi files(.mid), then one will adjust its distribution to try to fit another one. <br/>
+The distribution fitting process is done by moving groups of notes which are the majority, and moving to those notes that are the minority.
 The algorithm also creates relationships between musical notes by grouping them with indexes, and those notes move together. <br/>
 
 
@@ -42,7 +42,7 @@ The Learning curve is not smooth, but that is fine. Consider the fact that each 
 The whole process is optimized by gradient descent. More groups of notes are processed at initial state, and it decreases as its distribution is closer to another one (because step size is smaller).
 
 ## Notes Grouping
-The algorithm constantly monitor the changing distribution of the music each timeframe with anomaly detection. When the distribution changes drastically (it hits an adaptive threshold), The algorithm groups those notes that happen before the spike. This is used to simulate how human hear the chord changes in music. The downside of this method is that, it needs collect enough data first so that it detects chord changes, but this can cause some delay.
+The algorithm constantly monitors the changing distribution of the music in each timeframe with anomaly detection. When the distribution changes drastically (it hits an adaptive threshold), The algorithm groups those notes that happen before the spike. This is used to simulate how humans hear the chord changes in music. The downside of this method is that, it needs to collect enough data first so that it detects chord changes, but this can cause some delay.
 
 ## Other Features
 This web app can identify key, tempo, and time length of a Midi file. Music modes and tempo changes are not supported yet.
