@@ -1,7 +1,7 @@
 # Midi Harmony Transfer
  Midi Harmony Transfer program with custom machine learning algorithm. <br/>
  
- This web app is not hosted yet, but this is the [preview](https://loong218-toast.github.io/Midi_Harmony_Transfer/).
+ This web app is not properly hosted yet, but this is the [preview](https://loong218-toast.github.io/Midi_Harmony_Transfer/).
 
 # Results
 
